@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("img/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Menjadikan gambar selalu persegi (rasio 1:1) */
+}
+
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* == CSS UNTUK TOMBOL WHATSAPP == */
+.float-whatsapp-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px; /* Membuat sudut menjadi pil */
+  text-align: center;
+  font-size: 1rem; /* Ukuran font normal untuk teks */
+  font-weight: bold;
+  padding: 10px 20px; /* Memberi ruang di dalam tombol */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none; /* Menghilangkan garis bawah link */
+}
+
+.float-whatsapp-btn i {
+  font-size: 1.5rem; /* Ukuran khusus untuk ikon */
+}
+
+.float-whatsapp-btn:hover {
+  transform: scale(1.05); /* Sedikit membesar saat disentuh mouse */
+  color: #fff;
+}
+
+/* Warna khas untuk tombol Instagram */
+.btn-instagram {
+  background-color: #c13584;
+  color: white;
+  border-color: #c13584;
+}
+
+.btn-instagram:hover {
+  background-color: #a52d70;
+  color: white;
+  border-color: #a52d70;
+}
+
+/* Trik untuk MENGHILANGKAN KEDIP PUTIH (memaksa cross-dissolve) */
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  opacity: 1;
+}

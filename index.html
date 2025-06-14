@@ -17,89 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap");
-
-      body {
-        font-family: "Montserrat", sans-serif;
-      }
-
-      h1,
-      h2,
-      h3,
-      .navbar-brand {
-        font-family: "Playfair Display", serif;
-      }
-
-      .hero {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-          ),
-          url("img/hero.png");
-        background-size: cover;
-        background-position: center;
-        height: 90vh;
-      }
-
-      .card-img-top {
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: 1 / 1; /* Menjadikan gambar selalu persegi (rasio 1:1) */
-      }
-
-      .product-card {
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-      }
-
-      /* == CSS UNTUK TOMBOL WHATSAPP == */
-      .float-whatsapp-btn {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background-color: #25d366;
-        color: #fff;
-        border-radius: 50px; /* Membuat sudut menjadi pil */
-        text-align: center;
-        font-size: 1rem; /* Ukuran font normal untuk teks */
-        font-weight: bold;
-        padding: 10px 20px; /* Memberi ruang di dalam tombol */
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.2s ease-in-out;
-        text-decoration: none; /* Menghilangkan garis bawah link */
-      }
-
-      .float-whatsapp-btn i {
-        font-size: 1.5rem; /* Ukuran khusus untuk ikon */
-      }
-
-      .float-whatsapp-btn:hover {
-        transform: scale(1.05); /* Sedikit membesar saat disentuh mouse */
-        color: #fff;
-      }
-
-      /* Warna khas untuk tombol Instagram */
-      .btn-instagram {
-        background-color: #c13584;
-        color: white;
-        border-color: #c13584;
-      }
-
-      .btn-instagram:hover {
-        background-color: #a52d70;
-        color: white;
-        border-color: #a52d70;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav
@@ -157,33 +75,241 @@
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-3">
             <div class="col">
               <div class="card h-100 shadow-sm product-card">
-                <img src="img/1.jpg" class="card-img-top" alt="Buket Bunga" />
+                <div
+                  id="cardCarousel1"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2500"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/1.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 1A"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/2.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 1B"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/3.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 1C"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#cardCarousel1"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#cardCarousel1"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
                 <div class="card-body text-center">
-                  <h5 class="card-title">Buket Bunga</h5>
+                  <h5 class="card-title">Buket Bunga Cantik</h5>
                 </div>
               </div>
             </div>
+
             <div class="col">
               <div class="card h-100 shadow-sm product-card">
-                <img src="img/2.jpg" class="card-img-top" alt="Buket Bunga" />
+                <div
+                  id="cardCarousel2"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2500"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/5.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 2A"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/3.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 2B"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/6.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 2C"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#cardCarousel2"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#cardCarousel2"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
                 <div class="card-body text-center">
-                  <h5 class="card-title">Buket Bunga</h5>
+                  <h5 class="card-title">Hiasan Mahar Elegan</h5>
                 </div>
               </div>
             </div>
+
             <div class="col">
               <div class="card h-100 shadow-sm product-card">
-                <img src="img/3.jpg" class="card-img-top" alt="Buket Bunga" />
+                <div
+                  id="cardCarousel3"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2500"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/2.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 3A"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/6.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 3B"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#cardCarousel3"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#cardCarousel3"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
                 <div class="card-body text-center">
-                  <h5 class="card-title">Buket Bunga</h5>
+                  <h5 class="card-title">Buket Uang Kreatif</h5>
                 </div>
               </div>
             </div>
+
             <div class="col">
               <div class="card h-100 shadow-sm product-card">
-                <img src="img/4.jpg" class="card-img-top" alt="Buket Bunga" />
+                <div
+                  id="cardCarousel4"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2500"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/1.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 4A"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/3.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 4B"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/5.jpg"
+                        class="d-block w-100 card-img-top"
+                        alt="Gambar Produk 4C"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#cardCarousel4"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#cardCarousel4"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
                 <div class="card-body text-center">
-                  <h5 class="card-title">Buket Bunga</h5>
+                  <h5 class="card-title">Kotak Cincin Unik</h5>
                 </div>
               </div>
             </div>
